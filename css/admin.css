@@ -1,0 +1,48 @@
+* {
+    font-size: 1.4rem;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    
+}
+table {
+    width: 100%;
+}
+
+table th {
+    width: 20%;
+}
+table, th, td {
+    border: 1px solid;
+}
+.admin {
+    background-color: #FFB6C1;
+}
+.add-product {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    padding: 20px;
+    width: 260px;
+    position: absolute;
+    display: none;
+    left: 38%;
+    top: 34%;
+    background-color: #5F9EA0;
+}
+
+.add-product button {
+    margin: 0 auto;
+    width: 60px;
+}
+.tbl-product {
+    background-color: #20B2AA;
+    color: #fff;
+    height: 576px;
+    overflow: auto;
+}
+label {
+    width: 20px;
+}

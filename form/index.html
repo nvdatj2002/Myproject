@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="form" class="form">
+        <div class="title-form">
+            <h2 class="title">Đăng Ký</h2>
+            <p class="text">Học lập trình cùng f8</p>
+        </div>
+        <div class="form-group ">
+            <label for="fullname" class="lable">Tên Đầy Đủ</label>
+            <input type="text" id="fullname" rules="required" name="fullname" class="form-input " placeholder="VD: Nông Văn Đạt">
+            <span class="form-massage"></span>
+        </div>
+        <div class="form-group">
+            <label for="Email" class="lable">Email</label>
+            <input type="text" id="email" rules="required|email" name="email" class="form-input" placeholder="datnvpk02264@gmail.com">
+            <span class="form-massage"></span>
+        </div>
+        <div class="form-group ">
+            <label for="password" class="lable">Mật khẩu</label>
+            <input type="password"  rules="required|min:6" id="password" name="password" class="form-input" >
+            <span class="form-massage"></span>
+        </div>
+        <div class="form-group">
+            <label for="password-confirmation" class="lable">Nhập lại Mật khẩu</label>
+            <input type="password" id="password-confirmation" name="password-confirmation" class="form-input" >
+            <span class="form-massage"></span>
+        </div>
+        <!-- <div class="form-group">
+            <label for="province" class="lable">Tỉnh thành</label>
+            <select id="province"  name="province" >
+                <option value="">Chọn tỉnh</option>
+                <option value="HN">Hà Nội</option>
+                <option value="DL">Đắk Lắk</option>
+            </select>
+            <span class="form-massage"></span>
+        </div>
+        <div class="form-group">
+            <label for="password-confirmation" class="lable">Giới tính</label>
+            <input type="checkbox" name="gender" value="male" class="form-input" >
+            Nam
+            <input type="checkbox" name="gender" value="female" class="form-input" >
+            Nữ
+            <input type="checkbox" name="gender" value="orther" class="form-input" >
+            Khác
+            <span class="form-massage"></span>
+        </div> -->
+        <div class="submit">
+            <button class="btn" type="submit"> Submit</button>
+        </div>
+    </form>
+
+
+        <script src="./Validator.js"></script>
+        <script>
+             var form = new Validator('#form')
+            form.onSubmit = function (data) {
+                console.log(data);
+            }
+        
+        </script>
+
+</body>
+
+</html>

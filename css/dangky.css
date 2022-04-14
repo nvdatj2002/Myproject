@@ -1,0 +1,90 @@
+body {
+    background-color: #f7f7f7;
+}
+header {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+}
+
+.block-form {
+    display: flex;
+}
+#form {
+    width: 500px;
+    margin: 180px auto 0px;
+    background-color: #fff;
+    padding: 10px 20px;
+}
+.title-form {
+    text-align: center;
+    padding: 10px;
+}
+.title {
+    margin: 0;
+    padding: 6px;
+    text-align: center;
+    font-size: 18px;
+}
+.text {
+    margin: 0;
+    padding: 15px;
+}
+.form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+
+}
+.form-message {
+    font-size: 12px;
+    padding-left: 4px;
+}
+.form-input {
+    height: 38px;
+    padding-left: 8px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid rgb(160, 160, 160);
+}
+.lable {
+    padding: 8px 6px;
+    font-size: 14px;
+}
+
+.invalid .form-input{
+    border: 1px solid rgb(192, 6, 6)
+}
+.invalid .form-message {
+    color: red;
+    
+   
+}
+.submit {
+    text-align: center;
+}
+.submit {
+    padding: 10px;
+}
+.btn {
+    padding: 8px 24px;
+    background-color: rgb(87, 134, 87);
+    color: #f7f7f7;
+    border-radius: 4px;
+}
+.form-group-gender {
+    display: flex;
+    align-items: center;
+}
+.nav-login {
+    padding: 8px 10px;
+}
+.nav-login a {
+    font-size: 1.2rem;
+}

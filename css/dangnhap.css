@@ -1,0 +1,19 @@
+.form-group-gender {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding-left: 8px;
+    border: 1px solid #888888;
+    border-radius: 4px;
+}
+.lable-gender {
+    padding: 2px 6px;
+}
+.nav-register {
+    padding-left: 12px;
+    
+}
+.nav-register p a{
+    font-size: 1.2rem;
+    
+}

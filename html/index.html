@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <!-- liên hệ  -->
+        <div class="heaer-top">
+            <p class="heaer-top-left">FREESHIP TOÀN QUỐC ĐƠN HÀNG TỪ 500K</p>
+            <div class="heaer-top-phone">
+                <img class="heaer-top-phone-img" src="/img/phone.png" alt="">
+                <p>Holine: 0793 705 739</p>
+            </div>
+        </div>
+        <!-- danh mục -->
+        <div class="header-nav">
+            <div class="heaer-nav-logod">
+                <img src="/img/logo2.png" alt="" class="logo">
+            </div>
+            <div class="header-nav-menu">
+                <ul class="header-nav-menu-list">
+                    <li class="header-nav-menu-item"><a href="">HÀNG MỚI</a></li>
+                    <li class="header-nav-menu-item">
+                        <a href="">ÁO NAM</a>
+                        <div class="header-nav-submenu">
+                            <ul class="header-nav-submenu-list">
+                                <li class="header-nav-submenu-item"><a href="">Áo sơ mi</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Áo thun</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Áo polo</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Áo khoác</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Áo vét</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Áo ghi lê</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Áo len</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header-nav-menu-item">
+                        <a href="">QUẦN NAM</a>
+                        <div class="header-nav-submenu">
+                            <ul class="header-nav-submenu-list">
+                                <li class="header-nav-submenu-item"><a href="">Quần jeans</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Quần tây</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Quần kaki</a></li>
+                                <li class="header-nav-submenu-item"><a href="">QUần jogger</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Quần short</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Quần lót</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header-nav-menu-item">
+                        <a href="">PHỤ KIỆN</a>
+                        <div class="header-nav-submenu">
+                            <ul class="header-nav-submenu-list">
+                                <li class="header-nav-submenu-item"><a href="">Thắt lưng</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Ví da</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Cà vạt</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Nơ</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Mũ nón</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Túi sách</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Mắt kính</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header-nav-menu-item">
+                        <a href="">GIÀY DÉP</a>
+                        <div class="header-nav-submenu">
+                            <ul class="header-nav-submenu-list">
+                                <li class="header-nav-submenu-item"><a href="">Giày</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Sandal</a></li>
+                                <li class="header-nav-submenu-item"><a href="">Dép Nam</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header-nav-menu-item"><a href="">KHUYỄN MÃI</a></li>
+
+                </ul>
+            </div>
+            <div class="header-nav-right">
+                <div class="header-account">
+                    <i class="fa-solid fa-user header-nav-right-icon login-hover"></i>
+                    <div class="login">
+                        <a href="/html/dangnhap.html" class="login-item">
+                            Đăng nhập
+                        </a>
+                        <a href="/html/dangky.html" class="login-item">
+                            Đăng Ký
+                        </a>
+                    </div>
+                </div>
+                <div class="header-seacrh ">
+                    <i class="fa-solid fa-magnifying-glass header-nav-right-icon"></i>
+                    <div class="header-search-input">
+                        <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm">
+                    </div>
+                </div>
+                <div class="header-cart  ">
+                    <i class="fa-solid fa-cart-shopping header-nav-right-icon"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <div class="container">
+            <!-- slides -->
+            <div class="content-slideshow">
+                <button onclick="plusDivs(-1)" class="btn-right"><i class="fa-solid fa-angle-right"></i></button>
+                <img src="/img/banner.png" alt="" class="mySlides" width="100%" height="620px">
+                <img src="/img/banner2.png" alt="" class="mySlides" width="100%" height="620px">
+                <button onclick="plusDivs(1)" class="btn-left"><i class="fa-solid fa-angle-left"></i></button>
+            </div>
+            <!-- thông tin đổi về chính sách-->
+            <div class="info-policy">
+                <div class="info-policy-content">
+                    <div class="info-policy-item">
+                        <img class="info-policy-img" src="/img/gift.png" alt="">
+                        <span class="info-policy-item-text">FREESHIP đơn hàng trên 500K</span>
+                    </div>
+                    <div class="info-policy-item">
+                        <img class="info-policy-img" src="/img/check.png" alt="">
+                        <span class="info-policy-item-text">Kiểm tra hàng trước khi thanh toán</span>
+                    </div>
+                    <div class="info-policy-item">
+                        <img class="info-policy-img" src="/img/change.png" alt="">
+                        <span class="info-policy-item-text">Đổi trả trong vòng 7 ngày</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-new-title">
+                    <h2 class="product-new-title-text">THỜI TRANG HÓT NHẤT</h2>
+                </div>
+                <div class="container-product">
+                    <div class="grid">
+                        <div class="grid__row">
+                        </div>
+                    </div>
+                    <div class="see-more">
+                        <a class="see-more-text" href="">Xem Thêm</a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-new-title">
+                        <h2 class="product-new-title-text">SẢN PHẨM MỚI NHẤT</h2>
+                    </div>
+                    <div class="container-product">
+                        <div class="grid">
+                            <div class="grid__row">
+                                <div class="grid__column">
+                                    <a href="" class="grid-column-content">
+                                        <div class="grid-column-content-img">
+                                            <img src="/img/product0.jpg" alt="" class="grid-column-item-img">
+                                            <!-- <img src="/img/product01jpgg" alt="" class="grid-column-item-img1"> -->
+                                        </div>
+                                        <div class="grid-column-content-item">
+                                            <a class="grid-column-content-name" href="">Áo Thun ICON DENIM Colorful
+                                                Orgnls</a>
+                                            <p class="grid-column-content-price">280,000đ</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column">
+                                    <a href="" class="grid-column-content">
+                                        <div class="grid-column-content-img">
+                                            <img src="/img/product0.jpg" alt="" class="grid-column-item-img">
+                                            <!-- <img src="/img/product01jpgg" alt="" class="grid-column-item-img1"> -->
+                                        </div>
+                                        <div class="grid-column-content-item">
+                                            <a class="grid-column-content-name" href="">Áo Thun ICON DENIM Colorful
+                                                Orgnls</a>
+                                            <p class="grid-column-content-price">280,000đ</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column">
+                                    <a href="" class="grid-column-content">
+                                        <div class="grid-column-content-img">
+                                            <img src="/img/product0.jpg" alt="" class="grid-column-item-img">
+                                            <!-- <img src="/img/product01jpgg" alt="" class="grid-column-item-img1"> -->
+                                        </div>
+                                        <div class="grid-column-content-item">
+                                            <a class="grid-column-content-name" href="">Áo Thun ICON DENIM Colorful
+                                                Orgnls</a>
+                                            <p class="grid-column-content-price">280,000đ</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column">
+                                    <a href="" class="grid-column-content">
+                                        <div class="grid-column-content-img">
+                                            <img src="/img/product0.jpg" alt="" class="grid-column-item-img">
+                                            <!-- <img src="/img/product01jpgg" alt="" class="grid-column-item-img1"> -->
+                                        </div>
+                                        <div class="grid-column-content-item">
+                                            <a class="grid-column-content-name" href="">Áo Thun ICON DENIM Colorful
+                                                Orgnls</a>
+                                            <p class="grid-column-content-price">280,000đ</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column">
+                                    <a href="" class="grid-column-content">
+                                        <div class="grid-column-content-img">
+                                            <img src="/img/product0.jpg" alt="" class="grid-column-item-img">
+                                            <!-- <img src="/img/product01jpgg" alt="" class="grid-column-item-img1"> -->
+                                        </div>
+                                        <div class="grid-column-content-item">
+                                            <a class="grid-column-content-name" href="">Áo Thun ICON DENIM Colorful
+                                                Orgnls</a>
+                                            <p class="grid-column-content-price">280,000đ</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div id class="grid__column">
+                                    <a href="" class="grid-column-content">
+                                        <div class="grid-column-content-img">
+                                            <img src="/img/product0.jpg" alt="" class="grid-column-item-img">
+                                            <!-- <img src="/img/product01jpgg" alt="" class="grid-column-item-img1"> -->
+                                        </div>
+                                        <div class="grid-column-content-item">
+                                            <a class="grid-column-content-name" href="">Áo Thun ICON DENIM Colorful
+                                                Orgnls</a>
+                                            <p class="grid-column-content-price">280,000đ</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column">
+                                    <a href="" class="grid-column-content">
+                                        <div class="grid-column-content-img">
+                                            <img src="/img/product0.jpg" alt="" class="grid-column-item-img">
+                                            <!-- <img src="/img/product01jpgg" alt="" class="grid-column-item-img1"> -->
+                                        </div>
+                                        <div class="grid-column-content-item">
+                                            <a class="grid-column-content-name" href="">Áo Thun ICON DENIM Colorful
+                                                Orgnls</a>
+                                            <p class="grid-column-content-price">280,000đ</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid__column">
+                                    <a href="" class="grid-column-content">
+                                        <div class="grid-column-content-img">
+                                            <img src="/img/product0.jpg" alt="" class="grid-column-item-img">
+                                            <!-- <img src="/img/product01jpgg" alt="" class="grid-column-item-img1"> -->
+                                        </div>
+                                        <div class="grid-column-content-item">
+                                            <a class="grid-column-content-name" href="">Áo Thun ICON DENIM Colorful
+                                                Orgnls</a>
+                                            <p class="grid-column-content-price">280,000đ</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="see-more">
+                            <a class="see-more-text" href="">Xem Thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-best-sale">
+                    <div class="product-best-sale-title product-new-title">
+                        <h2 class="product-best-sale-title-item product-new-title-text">
+                            THỜI TRANG BÁN CHẠY
+                        </h2>
+                    </div>
+                    <div class="product-best-sale-slider">
+                        <div class="product-best-sale-slider-item">
+                            <div class="product-best-sale-slider-img">
+                                <a href=""><img src="/img/product0.jpg" alt=""
+                                        class="product-best-sale-slider-img-item"></a>
+                            </div>
+                            <div class="product-best-sale-info">
+                                <a href=""><img class+="product-best-sale-info-img"
+                                        src="/img/ca-vat-han-quoc-cv209-14759 (1).png" alt=""></a>
+                                <a href="">Cà Vạt Hàn Quốc CV210</a>
+                                <a href="">145.000</a>
+                            </div>
+                        </div>
+                        <div class="product-best-sale-slider-item">
+                            <div class="product-best-sale-slider-img">
+                                <a href=""><img src="/img/product0.jpg" alt=""
+                                        class="product-best-sale-slider-img-item"></a>
+                            </div>
+                            <div class="product-best-sale-info">
+                                <a href=""><img class+="product-best-sale-info-img"
+                                        src="/img/ca-vat-han-quoc-cv209-14759 (1).png" alt=""></a>
+                                <a href="">Cà Vạt Hàn Quốc CV210</a>
+                                <a href="">145.000</a>
+                            </div>
+                        </div>
+                        <div class="product-best-sale-slider-item">
+                            <div class="product-best-sale-slider-img">
+                                <a href=""><img src="/img/product0.jpg" alt=""
+                                        class="product-best-sale-slider-img-item"></a>
+                            </div>
+                            <div class="product-best-sale-info">
+                                <a href=""><img class+="product-best-sale-info-img"
+                                        src="/img/ca-vat-han-quoc-cv209-14759 (1).png" alt=""></a>
+                                <a href="">Cà Vạt Hàn Quốc CV210</a>
+                                <a href="">145.000</a>
+                            </div>
+                        </div>
+                        <div class="product-best-sale-slider-item">
+                            <div class="product-best-sale-slider-img">
+                                <a href=""><img src="/img/product0.jpg" alt=""
+                                        class="product-best-sale-slider-img-item"></a>
+                            </div>
+                            <div class="product-best-sale-info">
+                                <a href=""><img class+="product-best-sale-info-img"
+                                        src="/img/ca-vat-han-quoc-cv209-14759 (1).png" alt=""></a>
+                                <a href="">Cà Vạt Hàn Quốc CV210</a>
+                                <a href="">145.000</a>
+                            </div>
+                        </div>
+                        <div class="product-best-sale-slider-item">
+                            <div class="product-best-sale-slider-img">
+                                <a href=""><img src="/img/product0.jpg" alt=""
+                                        class="product-best-sale-slider-img-item"></a>
+                            </div>
+                            <div class="product-best-sale-info">
+                                <a href=""><img class+="product-best-sale-info-img"
+                                        src="/img/ca-vat-han-quoc-cv209-14759 (1).png" alt=""></a>
+                                <a href="">Cà Vạt Hàn Quốc CV210</a>
+                                <a href="">145.000</a>
+                            </div>
+                        </div>
+                        <div class="product-best-sale-slider-item">
+                            <div class="product-best-sale-slider-img">
+                                <a href=""><img src="/img/product0.jpg" alt=""
+                                        class="product-best-sale-slider-img-item"></a>
+                            </div>
+                            <div class="product-best-sale-info">
+                                <a href=""><img class+="product-best-sale-info-img"
+                                        src="/img/ca-vat-han-quoc-cv209-14759 (1).png" alt=""></a>
+                                <a href="">Cà Vạt Hàn Quốc CV210</a>
+                                <a href="">145.000</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-top">
+                <div class="footer-top-content">
+                    <ul>
+                        <i class="fa-solid fa-plane footer-icon"></i>
+                        THANH TOÁN & GIAO HÀNG
+                        <li>
+                            - Giao hàng và thu tiền tận nơi
+                        </li>
+                        <li>
+                            - Chuyển khoản và giao hàng
+                        </li>
+                        <li>
+                            - Mua hàng tại shop
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-top-content">
+                    <ul>
+                        <i class="fa-solid fa-money-check footer-icon"></i>
+                        THẺ THÀNH VIÊN
+                        <li>
+                            Chế độ ưu đãi thành viên VIP:
+                        </li>
+                        <li>
+                            - 5% cho thành viên Bạc
+                        </li>
+                        <li>
+                            - 10% cho thành viên Vàng
+                        </li>
+                        <li>
+                            - 15% cho thành viên Kim cương
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-top-content">
+                    <ul>
+                        <i class="fa-solid fa-clock footer-icon"></i>
+                        GIỜ MỞ CỬA
+                        <li>
+                            <strong>8h30 đến 22:00</strong>
+                        </li>
+                        <li>
+                            - Tất cả các ngày trong tuần
+                        </li>
+                        <li>
+                            - Áp dụng cho tất cả các chi nhánh hệ thống cửa hàng 4MEN
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-top-content">
+                    <ul>
+                        <i class="fa-solid fa-headphones footer-icon"></i>
+                        HỖ TRỢ 24/7
+                        <li>
+                            Gọi ngay cho chúng tôi khi bạn có thắc mắc
+                            - 0793705739
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-center">
+
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/js/home.js"></script>
+    <script src="/js/login.js"></script>
+</body>
+
+</html>
