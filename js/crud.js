@@ -58,16 +58,17 @@ class listProduct {
         }
     }
     updateProduct(product) {
+        let x = false
         let list = this.list
         console.log(product.id)
-        // console.log('b')
         console.log(list.length)
         for (let i = 0; i < list.length; i++) {
-            console.log('1')
             if (list[i].id == product.id) {
                 list[i] = product
+                x = true
             }
         }
+        return x
     }
     findProduct(id) {
         let list = this.list
@@ -78,13 +79,13 @@ class listProduct {
             }
         }
     }
-    sortById() {
+    sortGiaGiamDan() {
         let list = this.list
-        list.sort((a,b) => a.id-b.id)
+        list.sort((a, b) => b.gia - a.gia)
     }
     sortGia() {
         let list = this.list
-        list.sort((a,b) => a.gia-b.gia)
+        list.sort((a, b) => a.gia - b.gia)
     }
     removeProduct(id) {
         let list = this.list
@@ -121,7 +122,6 @@ class listProduct {
 const list = new listProduct()
 list.getData()
 render(list.getList())
-console.log(list.getList())
 
 
 function render(list) {
@@ -143,19 +143,21 @@ function render(list) {
                            </td>
                        </tr>`
     }
-    console.log(document.getElementById('render'))
     document.getElementById('render').innerHTML = table
 }
 function tbnAdd() {
     const x = document.querySelector('.add-product')
     if (x.style.display == 'block') {
-        
-    }else {
+
+    } else {
         x.style.display = 'block'
     }
 }
-
-function btnHuy () {
+function dangXuat() {
+    localStorage.removeItem('userLogin')
+    window.location = '/html/dangnhap.html'
+}
+function btnHuy() {
     const x = document.querySelector('.add-product')
     document.getElementById('id').value = ''
     document.getElementById('ten').value = ''
@@ -163,8 +165,8 @@ function btnHuy () {
     document.getElementById('gia').value = ''
     x.style.display = 'none'
 }
-function btnSortId() {
-    list.sortById()
+function btnSortGiaGianDan() {
+    list.sortGiaGiamDan()
     render(list.getList())
 }
 function btnSortGia() {
@@ -173,6 +175,7 @@ function btnSortGia() {
 }
 function deteleProduct(id) {
     list.removeProduct(id)
+    list.saveData()
     render(list.getList())
 }
 function editProduct(id) {
@@ -182,8 +185,6 @@ function editProduct(id) {
     document.getElementById('ten').value = product.ten
     document.getElementById('img').value = product.hinhAnh
     document.getElementById('gia').value = product.gia
-    // let x = document.querySelector('.add-product')
-    // x.style.display = 'block'
 }
 function saveUpdate() {
     let id = document.getElementById('id').value
@@ -191,27 +192,41 @@ function saveUpdate() {
     let img = document.getElementById('img').value
     let gia = document.getElementById('gia').value
     const product = new Product(ten, gia, img, id)
-    list.updateProduct(product)
-    list.saveData()
-    render(list.getList())
+    const x = list.updateProduct(product)
+    console.log(x)
+    if (x) {
+        list.saveData()
+        render(list.getList())
+        alert('Sửa thành công')
+    }else {
+        alert('Sửa Không thành công')
+    }
 }
 function add() {
     let id = document.getElementById('id').value
     let ten = document.getElementById('ten').value
     let img = document.getElementById('img').value
     let gia = document.getElementById('gia').value
-    if (id == '' || ten == '' || mota == '' || img == '' || gia == '') {
+    if (id == '' || ten == '' || img == '' || gia == '') {
         alert('nhập đầy đủ thông tin')
     } else {
         let product = new Product(ten, gia, img, id)
-        list.addProduct(product)
-        list.saveData()
-        render(list.getList())
-        document.getElementById('id').value = ''
-        document.getElementById('ten').value = ''
-        document.getElementById('img').value = ''
-        document.getElementById('gia').value = ''
+        let x = list.addProduct(product)
+        if (x) {
+            list.saveData()
+            render(list.getList())
+            document.getElementById('id').value = ''
+            document.getElementById('ten').value = ''
+            document.getElementById('img').value = ''
+            document.getElementById('gia').value = ''
+        }
+        else {
+            alert('id đã tôn tại')
+        }
     }
 }
 
+let dataLogin = localStorage.getItem('userLogin')
+let currenUserLogin = JSON.parse(dataLogin)
 
+document.getElementById('admin1').textContent = `ADMIN: ${currenUserLogin.username}`

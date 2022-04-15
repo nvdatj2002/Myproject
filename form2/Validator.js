@@ -16,7 +16,7 @@ function Validator(options) {
     var selectorRules = {};
     // hàm thực hiện validate
     function validate(inputElement, rule) {
-
+        console.log(inputElement)
         var errorElement = getParent(inputElement, options.formGroupSelector).querySelector(options.errorSelector);
         var errorMessage;
 
@@ -49,6 +49,7 @@ function Validator(options) {
 
     // lấy element của form cần validate
     var formElement = document.querySelector(options.form);
+    console.log(formElement)
     if (formElement) {
 
         // xử lí các sự kiện 
@@ -60,6 +61,7 @@ function Validator(options) {
             // lặp qua các rule và validate luôn
             options.rules.forEach(function (rule) {
                 var inputElement = formElement.querySelector(rule.selector);
+                console.log(inputElement)
                 var isValid = validate(inputElement, rule);
                 if (!isValid) {
                     isFormValid = false;
@@ -103,7 +105,7 @@ function Validator(options) {
                 selectorRules[rule.selector] = [rule.test];
             }
             var inputElement = formElement.querySelector(rule.selector);
-            var errorElement = getParent(inputElement, options.formGroupSelector).querySelector(options.errorSelector);
+            // var errorElement = getParent(inputElement, options.formGroupSelector).querySelector(options.errorSelector);
 
             if (inputElement) {
                 inputElement.onblur = function () {

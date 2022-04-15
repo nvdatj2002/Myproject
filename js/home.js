@@ -113,7 +113,7 @@ function showDivs(n) {
 
 let dataLogin = localStorage.getItem('userLogin')
 let currenUserLogin = JSON.parse(dataLogin)
-console.log(currenUserLogin)
+
 if (currenUserLogin) {
     let login = `<div class="header-account">
             <a href="" class="login-item">

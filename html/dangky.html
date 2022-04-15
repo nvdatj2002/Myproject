@@ -180,26 +180,31 @@
                     <h2>Đăng Ký</h2>
                 </div>
                 <div class="form-group">
+                    <label for="" class="lable">Họ và tên</label>
+                    <input type="text" id="name" name="fullname" class="form-input">
+                    <span id="messageName" class="form-message"></span>
+                </div>
+                <div class="form-group">
                     <label for="" class="lable">Tên Tài Khoản</label>
                     <input type="text" id="username" name="username" class="form-input">
-                    <span class="form-message"></span>
+                    <span id="messageUsername" class="form-message"></span>
                 </div>
                 <div class="form-group">
                     <label for="" class="lable">Email</label>
                     <input type="text" id="email" name="email" class="form-input">
-                    <span class="form-message"></span>
+                    <span id="messageEmail" class="form-message"></span>
                 </div>
                 <div class="form-group">
                     <label for="" class="lable">Mật Khẩu</label>
                     <input type="password" id="password" name="password" class="form-input">
-                    <span class="form-message"></span>
+                    <span id="messagePassword" class="form-message"></span>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="" class="lable">Nhập Lại Mật Khẩu</label>
                     <input type="password" id="password-confirmation" name="password-confirmation" class="form-input">
                     <span class="form-message"></span>
-                </div>
-                <div class="form-group">
+                </div> -->
+                <!-- <div class="form-group">
                     <label for="" class="lable lable-gender">Giới tính</label>
                     <div class="form-group-gender">
                         <label for="" class="lable">Nam</label>
@@ -210,12 +215,24 @@
                         <input type="radio" value="Khác" name="gender" class="form-input">
                     </div>
                     <span class="form-message"></span>
-                </div>
-                <div class="form-group">
+                </div> -->
+                <!-- <div class="form-group">
                     <label for="" class="lable">Ngày Sinh</label>
                     <input type="date" id="ngaysinh" name="ngaysinh" class="form-input ">
                     <span class="form-message"></span>
+                </div> -->
+                <div class="form-group">
+                    <label for="" class="role">role</label>
+                    <div class="form-group-gender">
+                        <select name="" id="role">
+                            <option selected>Select roles</option>
+                            <option value="admin">admin</option>
+                            <option value="user">User</option>
+                        </select>
+                    </div>
+                    <span id="messageRole" class="form-message"></span>
                 </div>
+                
                 <div class="nav-login">
                     <a href="dangnhap.html">Bạn đã có tài khoản?</a>
                 </div>
@@ -294,32 +311,32 @@
             </div>
         </div>
     </footer>
+    <!-- <script src="/form2/Validator.js"></script> -->
     <script src="/js/register.js"></script>
-    <script src="/form2/Validator.js"></script>
-    <script>
+    <!-- <script>
         Validator({
             form: '#form',
             formGroupSelector: '.form-group',
             errorSelector: '.form-message',
             rules: [
+                Validator.isResquired('#fullname'),
                 Validator.isResquired('#username', 'Vui lòng nhập tên đăng nhập'),
                 Validator.isResquired('#email', 'Vui lòng nhập email'),
                 Validator.isEmail('#email', 'Vui lòng nhập email'),
-                Validator.isResquired('#password', 'Vui lòng nhập mật khẩu'),
-                Validator.isResquired('#ngaysinh', 'Vui lòng nhập ngày sinh'),
-                Validator.isResquired('input[name="gender"]'),
+                // Validator.isResquired('#password', 'Vui lòng nhập mật khẩu'),
+                // Validator.isResquired('#ngaysinh', 'Vui lòng nhập ngày sinh'),
+                // Validator.isResquired('input[name="gender"]'),
                 // Validator.isResquired('#province'),
-
                 Validator.minLength('#password', 6),
-                Validator.isResquired('#password-confirmation', 'Vui lòng nhập lại mật khẩu'),
-                Validator.isConfirmed('#password-confirmation', function () {
-                    return document.querySelector('#form #password').value;
-                }, 'Mật khẩu nhập lại không chính xác!')
+                // Validator.isResquired('#password-confirmation', 'Vui lòng nhập lại mật khẩu'),
+                // Validator.isConfirmed('#password-confirmation', function () {
+                //     return document.querySelector('#form #password').value;
+                // }, 'Mật khẩu nhập lại không chính xác!')
             ],
-            onSubmit: function (data) {
-                console.log(data);
-            }
-        });
+            // onSubmit: function (data) {
+            //     console.log(data);
+            // }
+        }); -->
     </script>
 </body>
 

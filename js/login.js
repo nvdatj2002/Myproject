@@ -57,6 +57,8 @@ document.getElementById('form') && document.getElementById('form').addEventListe
     } else {
         if (loginAdmin) {
             alert('Đăng nhập thành công, bạn là admin')
+            let data = JSON.stringify(loginAdmin)
+            localStorage.setItem('userLogin',data)
             window.location= '/html/admin.html'
         } else if (loginUser) {
             alert('Đăng nhập thành công, bạn là user')

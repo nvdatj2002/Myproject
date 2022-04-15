@@ -18,7 +18,7 @@ table, th, td {
     border: 1px solid;
 }
 .admin {
-    background-color: #FFB6C1;
+    /* background-color: #FFB6C1; */
 }
 .add-product {
     display: flex;
@@ -38,8 +38,8 @@ table, th, td {
     width: 60px;
 }
 .tbl-product {
-    background-color: #20B2AA;
-    color: #fff;
+    /* background-color: #20B2AA; */
+    color: #333;
     height: 576px;
     overflow: auto;
 }
