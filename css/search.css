@@ -1,0 +1,19 @@
+main {
+    min-height: 360px;
+    width: 100%;
+    /* background-color: #f57224; */
+}
+
+.resultSearch {
+    width: 1260px;
+    margin: 0 auto;
+    height: 40px;
+}
+.resultSearch h2 {
+    font-size: 1.6rem;
+    line-height: 40px;
+    padding: 0 16px;
+}
+.container-product {
+    margin-top: 20px;
+}

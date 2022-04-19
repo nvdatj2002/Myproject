@@ -41,6 +41,11 @@ class listProduct {
             this.list = listGetData
         }
     }
+    findListProductByName(name) {
+        let list = this.list
+        let listNew = list.filter(value => value.ten.trim() == name)
+        return listNew
+    }
 }
 
 const store = new listProduct()
@@ -62,7 +67,7 @@ function renderProductHome(store) {
         </a>
     </div>`
     }
-    document.querySelector('.grid__row').innerHTML = product
+    document.getElementById('home').innerHTML = product
 }
 
 renderProductHome(store.getList())
@@ -132,5 +137,25 @@ if (currenUserLogin) {
 }
 function logOut() {
     localStorage.removeItem('userLogin')
+}
+
+// tìm kiếm sản phẩm 
+document.querySelector('.click').addEventListener('click',function(e) {
+    const x = document.querySelector('.header-search-input')
+    if(x.style.display == 'flex') {
+        x.style.display = 'none'
+    }else {
+        x.style.display = 'flex'
+    }
+})
+function btnSearch() {
+    let name = document.getElementById('inputSearch').value
+    listSearch = store.findListProductByName(name)
+    if(name == '') {
+        return
+    }
+    if(listSearch) {
+        window.location = `/html/timkiemsanpham.html?name=${name}`
+    }
 }
 

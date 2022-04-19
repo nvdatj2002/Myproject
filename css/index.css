@@ -287,7 +287,7 @@
     position: absolute;
     right: 0;
     border-radius: 2px;
-    display: none;
+    /* display: none; */
 }
 .search-input {
     width: 100%;
@@ -297,9 +297,6 @@
     padding-left: 10px;
     font-size: 1.4em;
     overflow: hidden;
-}
-.header-seacrh:hover .header-search-input {
-    display: block;
 }
 .search-input:focus ~ .header-search-input{
     border: 1px solid rgb(40, 137, 201);

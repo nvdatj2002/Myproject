@@ -117,7 +117,15 @@ function deleteProductCart(name) {
         render2()
     }
 }
-
+// tìm kiếm sản phẩm 
+document.querySelector('.click').addEventListener('click',function(e) {
+    const x = document.querySelector('.header-search-input')
+    if(x.style.display == 'flex') {
+        x.style.display = 'none'
+    }else {
+        x.style.display = 'flex'
+    }
+})
 
 
 

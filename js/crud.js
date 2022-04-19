@@ -148,7 +148,7 @@ function render(list) {
 function tbnAdd() {
     const x = document.querySelector('.add-product')
     if (x.style.display == 'block') {
-
+        x.style.display = 'none'
     } else {
         x.style.display = 'block'
     }

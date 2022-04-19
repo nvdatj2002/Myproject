@@ -101,9 +101,10 @@
                     </div>
                 </div>
                 <div class="header-seacrh ">
-                    <i class="fa-solid fa-magnifying-glass header-nav-right-icon"></i>
+                    <i class="fa-solid fa-magnifying-glass header-nav-right-icon click"></i>
                     <div class="header-search-input">
-                        <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm">
+                        <input id="inputSearch" type="text" class="search-input" placeholder="Tìm kiếm sản phẩm">
+                        <button onclick="btnSearch()" id="btnSearch">Tim kiem</button>
                     </div>
                 </div>
                 <div class="header-cart  ">
@@ -145,7 +146,7 @@
                 </div>
                 <div class="container-product">
                     <div class="grid">
-                        <div class="grid__row">
+                        <div class="grid__row" id="home">
                         </div>
                     </div>
                     <div class="see-more">
