@@ -16,7 +16,6 @@ function Validator(options) {
     var selectorRules = {};
     // hàm thực hiện validate
     function validate(inputElement, rule) {
-        console.log(inputElement)
         var errorElement = getParent(inputElement, options.formGroupSelector).querySelector(options.errorSelector);
         var errorMessage;
 
@@ -49,7 +48,6 @@ function Validator(options) {
 
     // lấy element của form cần validate
     var formElement = document.querySelector(options.form);
-    console.log(formElement)
     if (formElement) {
 
         // xử lí các sự kiện 

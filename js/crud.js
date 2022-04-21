@@ -145,6 +145,10 @@ function render(list) {
     }
     document.getElementById('render').innerHTML = table
 }
+let ul = localStorage.getItem('userLogin')
+let currentUserLogin = JSON.parse(ul)
+document.getElementById('admin1').innerHTML = `ADMIN: ${currentUserLogin.username}`
+
 function tbnAdd() {
     const x = document.querySelector('.add-product')
     if (x.style.display == 'block') {
@@ -174,9 +178,12 @@ function btnSortGia() {
     render(list.getList())
 }
 function deteleProduct(id) {
-    list.removeProduct(id)
-    list.saveData()
-    render(list.getList())
+    if (list.removeProduct(id)) {
+        list.saveData()
+        render(list.getList())
+        alert(`Xoá thành công sản phẩm có id ${id}`)
+    }
+
 }
 function editProduct(id) {
     tbnAdd()
@@ -198,7 +205,7 @@ function saveUpdate() {
         list.saveData()
         render(list.getList())
         alert('Sửa thành công')
-    }else {
+    } else {
         alert('Sửa Không thành công')
     }
 }
@@ -219,6 +226,7 @@ function add() {
             document.getElementById('ten').value = ''
             document.getElementById('img').value = ''
             document.getElementById('gia').value = ''
+            alert('Thêm thành công!!')
         }
         else {
             alert('id đã tôn tại')
@@ -226,7 +234,3 @@ function add() {
     }
 }
 
-let dataLogin = localStorage.getItem('userLogin')
-let currenUserLogin = JSON.parse(dataLogin)
-
-document.getElementById('admin1').textContent = `ADMIN: ${currenUserLogin.username}`

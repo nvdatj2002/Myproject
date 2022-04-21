@@ -113,59 +113,64 @@ document.getElementById('form').addEventListener('submit', function (e) {
         }
     } else {
         const createUser = new User(name, username, email, password, role)
-        store.addUser(createUser)
-        store.save()
-        alert('Đăng kí thành công')
-        document.getElementById('name').value = ''
-        document.getElementById('username').value = ''
-        document.getElementById('email').value = ''
-        document.getElementById('password').value = ''
-        document.getElementById('role').value = ''
+        if (store.addUser(createUser)) {
+            store.save()
+            alert('Đăng kí thành công')
+            document.getElementById('name').value = ''
+            document.getElementById('username').value = ''
+            document.getElementById('email').value = ''
+            document.getElementById('password').value = ''
+            document.getElementById('role').value = ''
+        }else {
+            // alert('Tên tài khoản đã tồn tại')
+            document.getElementById('messageUsername').innerText = 'Tài Khoản đã tồn tại'
+            document.getElementById('messageUsername').parentElement.classList.add('invalid')
+        }
     }
 })
 
 // sự kiện blur ra khỏi ô input
-document.getElementById('name').addEventListener('blur', function(e) {
-    if(e.target.value == '') {
+document.getElementById('name').addEventListener('blur', function (e) {
+    if (e.target.value == '') {
         document.getElementById('messageName').innerText = 'Vui lòng nhập họ tên'
         document.getElementById('messageName').parentElement.classList.add('invalid')
-    }else {
+    } else {
         document.getElementById('messageName').innerText = ''
         document.getElementById('messageName').parentElement.classList.remove('invalid')
     }
 })
-document.getElementById('username').addEventListener('blur', function(e) {
-    if(e.target.value == '') {
+document.getElementById('username').addEventListener('blur', function (e) {
+    if (e.target.value == '') {
         document.getElementById('messageUsername').innerText = 'Vui lòng nhập tên đăng nhập'
         document.getElementById('messageUsername').parentElement.classList.add('invalid')
-    }else {
+    } else {
         document.getElementById('messageUsername').innerText = ''
         document.getElementById('messageUsername').parentElement.classList.remove('invalid')
     }
 })
-document.getElementById('email').addEventListener('blur', function(e) {
-    if(e.target.value == '') {
+document.getElementById('email').addEventListener('blur', function (e) {
+    if (e.target.value == '') {
         document.getElementById('messageEmail').innerText = 'Vui lòng nhập Email'
         document.getElementById('messageEmail').parentElement.classList.add('invalid')
-    }else {
+    } else {
         document.getElementById('messageEmail').innerText = ''
         document.getElementById('messageEmail').parentElement.classList.remove('invalid')
     }
 })
-document.getElementById('password').addEventListener('blur', function(e) {
-    if(e.target.value == '') {
+document.getElementById('password').addEventListener('blur', function (e) {
+    if (e.target.value == '') {
         document.getElementById('messagePassword').innerText = 'Vui lòng mật khẩu'
         document.getElementById('messagePassword').parentElement.classList.add('invalid')
-    }else {
+    } else {
         document.getElementById('messagePassword').innerText = ''
         document.getElementById('messagePassword').parentElement.classList.remove('invalid')
     }
 })
-document.getElementById('role').addEventListener('blur', function(e) {
-    if(e.target.value == 'Select roles') {
+document.getElementById('role').addEventListener('blur', function (e) {
+    if (e.target.value == 'Select roles') {
         document.getElementById('messageRole').innerText = 'Vui lòng chọn role'
         document.getElementById('messageRole').parentElement.classList.add('invalid')
-    }else {
+    } else {
         document.getElementById('messageRole').innerText = ''
         document.getElementById('messageRole').parentElement.classList.remove('invalid')
     }

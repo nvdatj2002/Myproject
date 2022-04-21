@@ -50,7 +50,6 @@ class listProduct {
 
 const store = new listProduct()
 store.getData()
-console.log(store.getList())
 function renderProductHome(store) {
     let product = ''
     for (let i = 0; i < store.length; i++) {
