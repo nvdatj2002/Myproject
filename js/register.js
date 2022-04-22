@@ -91,7 +91,7 @@ document.getElementById('form').addEventListener('submit', function (e) {
     const password = document.getElementById('password').value
     const role = document.getElementById('role').value
 
-    if (name == '' || username == '' || email == '' || password == '' || role == '') {
+    if (name == '' || username == '' || email == '' || password == '' || role == 'Select roles') {
         if (name == '') {
             document.getElementById('messageName').innerText = 'Vui lòng nhập họ tên'
             document.getElementById('messageName').parentElement.classList.add('invalid')

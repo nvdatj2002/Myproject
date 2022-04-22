@@ -1,7 +1,5 @@
 window.addEventListener('load',function(e){
     const params = new URLSearchParams(window.location.search)
-
-    console.log(params)
     const id = params.get('id')
     const product = list.findProduct(id)
     if(product) {
