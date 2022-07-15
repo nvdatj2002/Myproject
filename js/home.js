@@ -103,7 +103,7 @@ function showDivs(n) {
     }
     // kiểm tra nếu index > 1 sẽ gán lại index = lenth;
     if (n < 1) {
-        slideIndex = x.length;
+        slideIndex = x.length;////
     }
     // Css display = 'none' tất cả các sildes 
     for (i = 0; i < x.length; i++) {
